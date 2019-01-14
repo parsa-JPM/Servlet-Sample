@@ -15,8 +15,8 @@ import java.io.PrintWriter;
         description = "Login Servlet",
         urlPatterns = {"/LoginServlet"},
         initParams = {
-                @WebInitParam(name = "user", value = "Pankaj"),
-                @WebInitParam(name = "password", value = "journaldev")
+                @WebInitParam(name = "user", value = "parsa"),
+                @WebInitParam(name = "password", value = "1234")
         })
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -56,8 +56,10 @@ public class LoginServlet extends HttpServlet {
             out.println("<font color=red>Either user name or password is wrong.</font>");
 
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.html");
+
             rd.include(request, response);
 
+            out.println("<h1>Fuck of</h1>");
         }
 
     }
